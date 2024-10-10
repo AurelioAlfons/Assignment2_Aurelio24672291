@@ -1,3 +1,5 @@
+// Author: Aurelio Hevi Alfons
+
 package com.example.assignment2_aurelio24672291
 
 import android.os.Bundle
