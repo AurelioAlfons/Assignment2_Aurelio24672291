@@ -9,6 +9,7 @@
 
     <!-- Tap Layout -->
     <com.google.android.material.tabs.TabLayout
+        android:id="@+id/Tab"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:ignore="MissingConstraints">
@@ -28,5 +29,16 @@
             />
 
     </com.google.android.material.tabs.TabLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@+id/Tab"
+        tools:layout_editor_absoluteX="0dp"
+        tools:listitem="@layout/item_layout_restful_api_dev" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

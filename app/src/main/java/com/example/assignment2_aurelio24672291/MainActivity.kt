@@ -3,6 +3,7 @@
 package com.example.assignment2_aurelio24672291
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -51,5 +52,30 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.d("nit3213", "onStart: ")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.d("nit3213", "onResume: ")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.d("nit3213", "onPause: ")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.d("nit3213", "onStop: ")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d("nit3213", "onDestroy: ")
     }
 }

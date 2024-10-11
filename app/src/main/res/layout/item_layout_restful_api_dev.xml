@@ -25,7 +25,7 @@
             android:textColor="#2B2F40"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="Aurelio Alfons" />
+            tools:text="Item" />
 
         <TextView
             android:id="@+id/itemIdText"
