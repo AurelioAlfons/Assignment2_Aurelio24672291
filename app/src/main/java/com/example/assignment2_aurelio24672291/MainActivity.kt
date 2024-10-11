@@ -8,6 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,6 +22,34 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        // Set up NavController and BottomNavigationView
+        val hostFragment = supportFragmentManager.findFragmentById(R.id.navhost) as NavHostFragment
+        // NavController is the central API for navigation component
+        val navController = hostFragment.navController
 
+        // Declare navbar variable with the BottomNavigationView with id = bottom_navigation
+        // From the main.xml
+        val navbar = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+
+        // Make sure to reset listener to avoid double insets
+        navbar.setOnApplyWindowInsetsListener(null)
+
+        // Connect BottomNavigationView with NavController
+        navbar.setupWithNavController(navController)
+
+        // Function to select the right clicked button
+        navbar.setOnItemSelectedListener { item ->
+            if (item.itemId != navbar.selectedItemId) {
+                // navbar.popBackStack(item.itemId, inclusive = false)
+                val fragmentId = when(item.itemId) {
+                    R.id.Navigation_logout -> R.id.fragmentLogin
+                    R.id.Navigation_dash -> R.id.fragmentDashboard
+                    R.id.Navigation_details -> R.id.fragmentDetails
+                    else -> R.id.fragmentLogin
+                }
+                navController.navigate(fragmentId)
+            }
+            true
+        }
     }
 }
