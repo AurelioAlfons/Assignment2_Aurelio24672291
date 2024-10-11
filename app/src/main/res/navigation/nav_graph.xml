@@ -11,7 +11,7 @@
         android:label="fragment_login_page"
         tools:layout="@layout/fragment_login_page" >
         <action
-            android:id="@+id/action_fragmentLogin_to_fragmentDashboard2"
+            android:id="@+id/action_fragmentLogin_to_fragmentDashboard"
             app:destination="@id/fragmentDashboard" />
         <action
             android:id="@+id/action_fragmentLogin_to_fragmentDetails"
@@ -23,8 +23,11 @@
         android:label="fragment_dashboard"
         tools:layout="@layout/fragment_dashboard" >
         <action
-            android:id="@+id/action_fragmentDashboard2_to_fragmentDetails2"
+            android:id="@+id/action_fragmentDashboard_to_fragmentDetails"
             app:destination="@id/fragmentDetails" />
+        <action
+            android:id="@+id/action_fragmentDashboard_to_fragmentLogin"
+            app:destination="@id/fragmentLogin" />
     </fragment>
     <fragment
         android:id="@+id/fragmentDetails"
@@ -32,7 +35,10 @@
         android:label="fragment_details"
         tools:layout="@layout/fragment_details" >
         <action
-            android:id="@+id/action_fragmentDetails2_to_fragmentDashboard2"
+            android:id="@+id/action_fragmentDetails_to_fragmentDashboard"
             app:destination="@id/fragmentDashboard" />
+        <action
+            android:id="@+id/action_fragmentDetails_to_fragmentLogin"
+            app:destination="@id/fragmentLogin" />
     </fragment>
 </navigation>
