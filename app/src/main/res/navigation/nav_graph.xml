@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_host"
+    android:id="@+id/nav_graph.xml"
     app:startDestination="@id/fragmentLogin">
 
     <fragment
@@ -11,8 +11,11 @@
         android:label="fragment_login_page"
         tools:layout="@layout/fragment_login_page" >
         <action
-            android:id="@+id/action_fragmentLogin_to_fragmentDashboard"
+            android:id="@+id/action_fragmentLogin_to_fragmentDashboard2"
             app:destination="@id/fragmentDashboard" />
+        <action
+            android:id="@+id/action_fragmentLogin_to_fragmentDetails"
+            app:destination="@id/fragmentDetails" />
     </fragment>
     <fragment
         android:id="@+id/fragmentDashboard"
@@ -20,7 +23,7 @@
         android:label="fragment_dashboard"
         tools:layout="@layout/fragment_dashboard" >
         <action
-            android:id="@+id/action_fragmentDashboard_to_fragmentDetails"
+            android:id="@+id/action_fragmentDashboard2_to_fragmentDetails2"
             app:destination="@id/fragmentDetails" />
     </fragment>
     <fragment
@@ -29,7 +32,7 @@
         android:label="fragment_details"
         tools:layout="@layout/fragment_details" >
         <action
-            android:id="@+id/action_fragmentDetails_to_fragmentDashboard"
+            android:id="@+id/action_fragmentDetails2_to_fragmentDashboard2"
             app:destination="@id/fragmentDashboard" />
     </fragment>
 </navigation>
