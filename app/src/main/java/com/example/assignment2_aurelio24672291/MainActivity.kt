@@ -29,8 +29,26 @@ class MainActivity : AppCompatActivity() {
         val navController = hostFragment.navController
         val navbar = findViewById<BottomNavigationView>(R.id.bottom_navigation)
 
+        // Make sure to reset listener to avoid double insets
+        navbar.setOnApplyWindowInsetsListener(null)
+
         // Connect BottomNavigationView with NavController
         navbar.setupWithNavController(navController)
+
+        // Function to select the right clicked button
+        navbar.setOnItemSelectedListener { item ->
+            if (item.itemId != navbar.selectedItemId) {
+                // navbar.popBackStack(item.itemId, inclusive = false)
+                val fragmentId = when(item.itemId) {
+                    R.id.Navigation_logout -> R.id.fragmentLogin
+                    R.id.Navigation_dash -> R.id.fragmentDashboard
+                    R.id.Navigation_details -> R.id.fragmentDetails
+                    else -> R.id.fragmentLogin
+                }
+                navController.navigate(fragmentId)
+            }
+            true
+        }
 
         // Show or hide BottomNavigationView based on the current fragment
         navController.addOnDestinationChangedListener { _, destination, _ ->
