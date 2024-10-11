@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_host"
+    app:startDestination="@id/fragmentLogin">
+
+    <fragment
+        android:id="@+id/fragmentLogin"
+        android:name="com.example.assignment2_aurelio24672291.pages.FragmentLogin"
+        android:label="fragment_login_page"
+        tools:layout="@layout/fragment_login_page" >
+        <action
+            android:id="@+id/action_fragmentLogin_to_fragmentDashboard"
+            app:destination="@id/fragmentDashboard" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDashboard"
+        android:name="com.example.assignment2_aurelio24672291.pages.FragmentDashboard"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_fragmentDashboard_to_fragmentDetails"
+            app:destination="@id/fragmentDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDetails"
+        android:name="com.example.assignment2_aurelio24672291.pages.FragmentDetails"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details" >
+        <action
+            android:id="@+id/action_fragmentDetails_to_fragmentDashboard"
+            app:destination="@id/fragmentDashboard" />
+    </fragment>
+</navigation>
