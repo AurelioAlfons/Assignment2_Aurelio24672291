@@ -33,7 +33,7 @@ class FragmentLogin : Fragment() {
             insets
         }
 
-        // Declare variable to go home
+        // Declare variable to go Dashboard Page
         val goToHome: Button = view.findViewById(R.id.SignIn)
 
         // On Click Listener
@@ -51,10 +51,10 @@ class FragmentLogin : Fragment() {
                 .setPopUpTo(R.id.fragmentLogin, true)
                 .build()
 
-            // Move from login to home
+            // Move from login to Dashboard
             findNavController().navigate(R.id.action_fragmentLogin_to_fragmentDashboard, null, navOptions)
 
-            // Update the bottom navigation selectedId to home
+            // Update the bottom navigation selectedId to Dashboard
             val navView = activity?.findViewById<BottomNavigationView>(R.id.bottom_navigation)
             navView?.selectedItemId = R.id.Navigation_dash
         }

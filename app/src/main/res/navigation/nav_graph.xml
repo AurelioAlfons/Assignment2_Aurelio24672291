@@ -17,6 +17,7 @@
             android:id="@+id/action_fragmentLogin_to_fragmentDetails"
             app:destination="@id/fragmentDetails" />
     </fragment>
+
     <fragment
         android:id="@+id/fragmentDashboard"
         android:name="com.example.assignment2_aurelio24672291.pages.FragmentDashboard"
@@ -29,11 +30,15 @@
             android:id="@+id/action_fragmentDashboard_to_fragmentLogin"
             app:destination="@id/fragmentLogin" />
     </fragment>
+
     <fragment
         android:id="@+id/fragmentDetails"
         android:name="com.example.assignment2_aurelio24672291.pages.FragmentDetails"
         android:label="fragment_details"
         tools:layout="@layout/fragment_details" >
+        <argument
+            android:name="detail"
+            app:argType="com.example.assignment2_aurelio24672291.data.ResponseItem" />
         <action
             android:id="@+id/action_fragmentDetails_to_fragmentDashboard"
             app:destination="@id/fragmentDashboard" />
