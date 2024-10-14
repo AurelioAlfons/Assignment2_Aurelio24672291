@@ -25,7 +25,7 @@
             android:textColor="#2B2F40"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="Item" />
+            tools:text="Title" />
 
         <TextView
             android:id="@+id/itemIdText"
@@ -37,7 +37,34 @@
             android:textColor="#2B2F40"
             app:layout_constraintStart_toStartOf="@id/itemNametext"
             app:layout_constraintTop_toBottomOf="@id/itemNametext"
-            tools:text="ID: 4672291" />
+            tools:text="Artist: Leonardo Da Vinci" />
+
+        <TextView
+            android:id="@+id/itemYeartext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text=""
+            android:textAppearance="?attr/textAppearanceTitleMedium"
+            android:textColor="#2B2F40"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.952"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Year: 1503" />
+
+        <TextView
+            android:id="@+id/itemMediumtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:text=""
+            android:textAppearance="?attr/textAppearanceBodyMedium"
+            android:textColor="#2B2F40"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/itemYeartext"
+            tools:text="Medium" />
 
         <TextView
             android:id="@+id/detailsText"

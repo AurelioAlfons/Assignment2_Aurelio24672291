@@ -14,7 +14,13 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
+//@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
+
+//    @Inject
+//    @Named("String1")
+//    lateinit var myString1:String
+
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
